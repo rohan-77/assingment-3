@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="STYLESHEET" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="background">
+            <div class="nav">
+                <a class="a active" href="#HOME">HOME</a>
+                <a class="b" href="#PROFILE">PROFILE</a>
+                <a class="c" href="#GALLERY">GALLERY</a>
+                <a class="d" href="#CONTACT">CONTACT</a>
+            </div>
+            <div class="content">
+             <div class="HOME">
+                 <h1>i am rohan tyagi</h1>
+                 <h3>web devloper</h3>
+
+             </div>   
+             <div class="PROFILE">
+                 <p><b>hello friends,</b><br>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ullam, praesentium tempora odit sint doloribus magni dolores numquam commodi eveniet aspernatur incidunt expedita veritatis qui explicabo possimus ipsa suscipit voluptate?</p>
+
+             
+            </div>
+            <div class="GALLERY">
+                <div class="image">
+                    <h1>HERE YOU GO.....</h1>
+                    <img src="./images/IMG-20200518-WA0036.jpg">
+                    <img src="./images/IMG-20200518-WA0037.jpg">
+                    <img src="./images/IMG_20191229_111954.jpg">
+                    
+                </div>
+                <div class="CONTACT">
+                    <h2>contact no.</h2>
+                    <p>8976546789</p>
+                    <h3>email id</h3>
+                    <p>jmack@gmail.com</p>
+
+                </div>
+
+            </div>
+            </div>
+
+        </div>
+        <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('a').click(function(){
+                //alert("click here");
+                var selected = $(this);
+                $('a').removeclass('active');
+                $(selected).addClass('active');
+        });
+        var $a = $('.a'),
+        $b = $('.b'),
+        $c = $('.c'),
+        $d = $('.d'),
+        $HOME = $('.HOME'),
+        $PROFILE =$('.PROFILE'),
+        $GALLERY =$('.GALLERY'),
+        $CONTACT =$('.CONTACT');
+        
+        $a.click(function(){
+            $HOME.fadein();
+            $PROFILE.fadeout();
+            $GALLERY.fadeOut();
+            $CONTACT.fadeOut();
+
+        });
+        $b.click(function(){
+            $PROFILE.fadein();
+            $HOME.fadeout();
+            $GALLERY.fadeOut();
+            $CONTACT.fadeOut();
+        });
+        $c.click(function(){
+            $GALLERY.fadein();
+            $home.fadeout();
+            $PROFILE.fadeOut();
+            $CONTACT.fadeOut();
+        });
+        $d.click(function(){
+            $CONTACT.fadein();
+            $HOME.fadeout();
+            $GALLERY.fadein();
+            $PROFILE.fadeout();
+        });
+        });
+        </script>
+        
+    </body>
+</html>
